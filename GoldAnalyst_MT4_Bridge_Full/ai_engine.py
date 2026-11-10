@@ -64,7 +64,7 @@ def generate_analysis(instrument, files):
     api_key = os.getenv('GEMINI_API_KEY')
     if not api_key:
         raise ValueError('GEMINI_API_KEY belum diisi')
-    model = os.getenv('GEMINI_MODEL', 'gemini-3.8-flash')
+    model = os.getenv('GEMINI_MODEL', 'gemini-3.6-flash')
     now = datetime.now(timezone.utc).isoformat()
     parts = [types.Part.from_text(text=(
         f'INSTRUMEN DIPILIH: {instrument} / {INSTRUMENTS[instrument]["name"]}. '
